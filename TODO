@@ -1,0 +1,13 @@
+// Libraries used: PIL (Image, ), os, pathlib, tkinter
+
+0. Pick folder where to apply app 
+1. Convert image into hex
+    -
+    -
+2. Find hex which overlaps with menubar image
+    -
+3. recognize where year&date is 
+4. extract date&year to file & store it in file
+5. cut out the menubar and possibly the nationinfobar from image
+6. rename file into what 4 concluded
+7. convert into .jpg
