@@ -1,19 +1,15 @@
-import pathlib
 from tkinter import filedialog, Tk, StringVar, Label, Button
-from image_hex_converter import convert_img
+from image_fixer import walk_folder
 
 def browse_button():
     global folder_path
-    filename = filedialog.askdirectory() 
+    filename = filedialog.askdirectory() # make so this starts off in a Darkest Hour folder
     folder_path.set(filename)
-
-def fix_imgs(folder):
-    pass
-
+       
 window = Tk()
 folder_path = StringVar()
 
-confirm = Button(text="Select", command=lambda: fix_imgs(folder_path.get()))
+confirm = Button(text="Select", command=lambda: walk_folder(folder_path.get()))
 confirm.grid(row=0, column=1)
 browser = Button(text="Browse", command=browse_button)
 browser.grid(row=0,column=2)
